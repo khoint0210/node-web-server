@@ -1,5 +1,6 @@
 const express = require('express');
 const hbs = require('hbs');
+const port = process.env.PORT || 3000 ;
 
 var app = express();
 
@@ -50,5 +51,6 @@ app.get('/bad', (req, res) => {
    )
   });
 
-app.listen(8080);
-console.log('server is up on port 8080');
+app.listen(port, () => {
+  console.log(`server is up on port ${port} ` );
+});
